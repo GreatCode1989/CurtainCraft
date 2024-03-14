@@ -1,0 +1,89 @@
+.modal
+    display: none
+    &__inner
+        position: relative
+        @media (max-width: 575px)
+            height: 100%
+    &__close
+        position: absolute
+        top: 20px
+        right: 20px
+        &:hover svg, &:focus svg
+            transform: scale(1.1)
+    &__title
+        font-weight: 800
+        font-size: 18px
+        text-transform: uppercase
+        margin-bottom: 18px
+        color: #ffffff
+        &--small
+            font-size: 14px
+            margin-top: 16pxß
+    .label--checkbox
+        font-weight: 300
+        font-size: 14px
+        line-height: 16px
+        color: #E5EFDC
+        text-align: left
+    .btn
+        background: linear-gradient(180deg, #ADDCD7 0%, #96CCC6 100%)
+        margin: 0 auto
+        &:hover, &:focus
+            background: linear-gradient(180deg, #93CFCB 0%, #77CEC8 100%)
+            border: none
+        &:active
+            background: linear-gradient(180deg, #3ACBC6 0%, #83CDC5 100%)
+            border: none
+
+.fancybox-slide
+    #keep-in-touch
+        background-color: $malina
+        padding: 15px
+        text-align: center
+        height: 475px
+        max-width: 460px
+        @media (max-width: 575px)
+            min-height: 475px
+            height: 100%
+        .stroke
+            padding: 70px 58px 48px
+            @media (max-width: 575px)
+                height: 100%
+        .fancybox-button.fancybox-close-small
+            display: none
+    #send
+        background-color: $malina
+        padding: 15px
+        text-align: center
+        height: auto
+        max-width: 460px
+        @media (max-width: 575px)
+            min-height: 475px
+            height: 100%
+        .stroke
+            padding: 70px 58px 48px
+            @media (max-width: 575px)
+                height: 100%
+        .fancybox-button.fancybox-close-small
+            display: none
+        .btn
+            outline-color: #ffffff
+    #question
+        background-color: $malina
+        padding: 15px
+        text-align: center
+        height: auto
+        max-width: 460px
+        @media (max-width: 575px)
+            min-height: 475px
+            height: auto
+        .stroke
+            padding: 70px 58px 48px
+            @media (max-width: 575px)
+                height: 100%
+        .fancybox-button.fancybox-close-small
+            display: none
+        .question__ways
+            display: flex
+            align-items: center
+            

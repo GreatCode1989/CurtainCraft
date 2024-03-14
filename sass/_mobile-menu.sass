@@ -1,0 +1,71 @@
+.mobile-menu
+    display: none
+    position: fixed
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background-color: $malina
+    z-index: 12
+    overflow: scroll
+    padding-bottom: 28px
+    &__inner
+        position: relative
+    &--active
+        display: block
+    &--open
+        position: fixed
+    &__btn
+        padding-top: 10px
+    &__title
+        padding: 17px 15px 14px
+        text-align: center
+        font-family: Andantino, Arial, sans-serif
+        font-size: 32px
+        line-height: 100%
+        color: $rose
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3)
+    &__main
+        padding: 32px 25px
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3)
+    &__list
+        list-style: none
+        padding: 0
+        padding-bottom: 73px
+    &__link
+        display: block
+        font-weight: 800
+        font-size: 18px
+        text-align: center
+        text-transform: uppercase
+        color: #FFFFFF
+        padding-bottom: 12px
+    &__order
+        max-width: 250px
+        margin: 0 auto
+    &__phone-link
+        padding: 17px 15px 14px
+        text-align: center
+        display: block
+        font-weight: 800
+        font-size: 20px
+        line-height: 150%
+        color: #ffffff
+    &__soc
+        display: flex
+        justify-content: center
+        &-link
+            display: inline-block
+            margin-right: 15px
+            &:last-child
+                margin-right: 0
+        &-text
+            font-size: 0
+        &-svg
+            opacity: 0.5
+    &__close
+        position: absolute
+        top: 20px
+        right: 20px
+        &:hover svg, &:focus svg
+            transform: scale(1.1)

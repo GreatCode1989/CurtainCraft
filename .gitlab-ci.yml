@@ -1,0 +1,90 @@
+# version 0.0.1
+stages:
+  - cleanbackup
+  - createreserv
+  - pull
+  - restart
+  - test
+
+
+cleanbackup:
+  stage: .pre
+  script: rm -rf /opt/shtory-backup/* && cp -r /opt/shtory/* /opt/shtory-backup/
+  tags: [prod]
+  only:
+    - master
+
+
+pull_prod:
+  stage: pull
+  tags: [prod]
+  script:
+    - /usr/bin/sudo git -C /opt/shtory/ checkout master
+    - /usr/bin/sudo git -C /opt/shtory/ pull
+  only:
+    - master
+
+
+pull_dev:
+  stage: pull
+  tags: [dev]
+  script:
+    - /usr/bin/sudo rm -rf /opt/shtory-dev
+    - /usr/bin/sudo mkdir -p /opt/shtory-dev
+    - /usr/bin/sudo git clone git@gitlab.com:domenik_irp/shtory.git /opt/shtory-dev/
+    - /usr/bin/sudo git -C /opt/shtory-dev/ fetch
+    - /usr/bin/sudo git -C /opt/shtory-dev/ checkout dev
+    - /usr/bin/sudo git -C /opt/shtory-dev/ pull
+  only:
+    - dev
+
+
+pull_test:
+  stage: pull
+  tags: [test]
+  script:
+    - /usr/bin/sudo rm -rf /opt/shtory-test
+    - /usr/bin/sudo mkdir -p /opt/shtory-test
+    - /usr/bin/sudo git clone git@gitlab.com:domenik_irp/shtory.git /opt/shtory-test/
+    - /usr/bin/sudo git -C /opt/shtory-test/ fetch
+    - /usr/bin/sudo git -C /opt/shtory-test/ checkout dev
+    - /usr/bin/sudo git -C /opt/shtory-test/ pull
+  only:
+    - test
+
+
+restart:
+  stage: restart
+  script:
+    - /usr/bin/sudo /bin/systemctl stop apache2.service
+    - /usr/bin/sudo /bin/systemctl start apache2.service
+
+
+test_dev:
+  stage: test
+  tags: [dev]
+  script:
+    - result=`curl -s -o /dev/null -I -w "%{http_code}" http://116.202.13.54:8080/`
+    - if [[ $result -eq "200" ]]; then exit 0; else exit $result; fi
+  only:
+    - dev
+
+
+test_test:
+  stage: test
+  tags: [test]
+  script:
+    - result=`curl -s -o /dev/null -I -w "%{http_code}" http://116.202.13.54:9090/`
+    - if [[ $result -eq "200" ]]; then exit 0; else exit $result; fi
+  only:
+    - test
+
+
+test_prod:
+  stage: test
+  tags: [prod]
+  script:
+    - result=`curl -s -o /dev/null -I -w "%{http_code}" http://78.47.228.124`
+    - if [[ $result -eq "200" ]]; then exit 0; else exit $result; fi
+  only:
+    - master

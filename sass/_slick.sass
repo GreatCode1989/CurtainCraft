@@ -1,0 +1,26 @@
+.slick-dots
+    font-size: 0
+    display: flex
+    position: absolute
+    bottom: 21px
+    left: 50%
+    transform: translateX(-50%)
+    li
+        width: 10px
+        height: 10px
+        margin-right: 5px
+        &:last-child
+            margin-right: 0
+    button
+        width: 10px
+        height: 10px
+        padding: 0
+        border: 2px solid rgba(#ffffff, 0.4)
+        border-radius: 50%
+        background: rgba($malina, 0.4)
+        outline: none
+    .slick-active
+        button
+            background: $malina
+            border-color: #ffffff
+            outline: none

@@ -1,0 +1,154 @@
+.parallax-window
+    height: 170vh
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    @media (max-width: 767px)
+        filter: blur(8px)
+        height: 100vh 
+    &::before
+        @media (max-width: 767px)
+            content: ''
+            background: linear-gradient(180deg, rgba(125, 126, 130, 0.5) 0%, rgba(166, 118, 130, 0.5) 100%)
+            position: absolute
+            top: 0
+            bottom: 0
+            left: 0
+            right: 0        
+    
+.main
+    &__top
+        position: relative
+        
+    &__banner
+        display: flex
+        justify-content: center
+        align-items: center 
+        height: 100vh
+
+    &__logo
+        margin-bottom: 15px
+        
+    &__title
+        &-stroke
+            width: 760px
+            height: 352px
+            margin-top: 150px
+            border-color: $rose
+            @media (max-width: 767px)
+                border: none
+                margin-top: 0
+        &-block
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: column
+            height: 322px
+            background: linear-gradient(113.8deg, #FDF2EF 0%, #FFFFFF 100%)
+            box-shadow: 15px 0px 20px rgba(0, 0, 0, 0.15)
+            @media (max-width: 767px)
+                background: transparent
+                box-shadow: none
+
+    &__subtitle
+        font-weight: 300
+        font-size: 18px
+        text-align: center
+        margin: -2px 0 46px
+        @media (max-width: 767px)
+            font-size: 16px
+            color: #ffffff
+            margin: 0 0 28px
+        @media (max-width: 575px)
+            max-width: 230px
+        
+    &__arrow
+        position: absolute
+        bottom: 50px
+        left: 50%
+        transform: translateX(-50%)
+        &-svg:hover path,
+        &-svg:focus path
+            stroke: $malina
+
+.service
+    padding: 20px 0 80px
+    position: relative
+    background: linear-gradient(transparent, rgba(255,255,255,0.5) 8%, rgba(255,255,255,0.8) 16%, #fff 30%)
+    &::before
+        @media (max-width: 767px)
+            content: ''
+            position: absolute
+            top: -76px
+            left: 0
+            right: 0
+            height: 76px
+            background: url(../img/banner-mask.png) no-repeat 50% 100% / cover
+    &::after
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 0
+        right: 0
+        height: 183px
+        background-image: url(../img/banner-mask.png)
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: 50% 0
+    @media (max-width: 767px)
+        background: #FAF5F7
+        padding: 45px 0 50px
+    .h2
+        padding-bottom: 41px
+        @media (max-width: 575px)
+            padding-bottom: 8px
+    &__inner
+        text-align: center
+    &__items
+        display: flex
+        justify-content: center
+        align-items: flex-start
+        @media (max-width: 575px)
+            flex-direction: column
+            align-items: center
+    &__item
+        margin-right: 53px
+        position: relative
+        max-width: 176px
+        @media (max-width: 575px)
+            margin-right: 0
+            margin-bottom: 42px
+            max-width: 300px
+        &::after
+            content: ''
+            position: absolute
+            right: -26px
+            top: 7px
+            width: 1px
+            height: 138px
+            background-color: $rose
+            @media (max-width: 575px)
+                transform: rotate(90deg) translateX(50%)
+                top: auto
+                bottom: -55px
+                height: 80px
+                right: 50%
+        &:last-child
+            margin-right: 0
+            @media (max-width: 575px)
+                margin-bottom: 0
+            &::after
+                content: none
+        &-title
+            margin: 37px 0 23px
+            text-align: center
+            text-transform: uppercase
+            font-weight: 300
+            @media (max-width: 575px)
+                max-width: 176px
+                margin: 16px auto 6px
+        &-description
+            font-weight: 300
+            text-align: center

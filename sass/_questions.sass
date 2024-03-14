@@ -1,0 +1,42 @@
+.questions
+    background-color: $tiffany 
+    background-image: url(../img/questions-banner.jpg)
+    background-repeat: no-repeat
+    background-position: 50% 50%
+    background-size:  cover
+    position: relative
+    &::after
+        @media (max-width: 767px)
+            content: ''
+            position: absolute
+            top: 0
+            bottom: 0
+            left: 0
+            right: 0
+            background: rgba(255, 255, 255, 0.5)
+            z-index: 1
+    @media (max-width: 575px)
+        background-position: 15% 50%
+    &__inner
+        position: relative
+        z-index: 2
+    &__block
+        padding: 36px 0 55px
+        text-align: center
+        @media (max-width: 767px)
+            padding: 58px 30px 72px
+    .h2
+        margin-bottom: 10px
+        @media (max-width: 767px)
+            margin-bottom: 18px
+    &__text
+        font-weight: 300
+        font-size: 18px
+        padding-bottom: 22px
+        max-width: 420px
+        @media (max-width: 767px)
+            margin: 0 auto
+            padding-bottom: 25px
+    .btn
+        max-width: 180px
+        margin: 0 auto

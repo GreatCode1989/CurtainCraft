@@ -1,0 +1,75 @@
+.portfolio
+    margin-bottom: 50px
+    @media (max-width: 767px)
+        margin-bottom: 25px
+    .container
+        @media (max-width: 575px)
+            padding: 0
+    &__block
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+    &__item
+        width: calc(16.67% - 7px)
+        height: 157px
+        overflow: hidden
+        margin-right: 5px
+        margin-bottom: 5px
+        &:nth-child(6n + 6)
+            margin-right: 0
+            @media (max-width: 991px)
+                margin-right: 5px
+        .img-fluid
+            width: 100%
+            height: 100%
+            object-fit: cover
+        .fancy
+            display: inline-block
+            height: 129px
+            overflow: hidden
+            @media (max-width: 767px)
+                height: 100%
+        @media (max-width: 991px)
+            width: calc(25% - 4px)
+            height: 140px
+            &:nth-child(4n + 4)
+                margin-right: 0
+                @media (max-width: 767px)
+                    margin-right: 5px
+        @media (max-width: 767px)
+            margin-bottom: 0
+            height: 220px
+            width: auto
+            margin-right: 5px
+        @media (max-width: 575px)
+            height: 330px
+            width: 239px
+        .img-fluid
+            @media (max-width: 575px)
+                object-fit: cover
+                height: 100%
+
+    .h2 
+        text-align: center
+        margin-bottom: 60px
+        @media (max-width: 767px)
+            margin-bottom: 38px
+    .h2--line::after
+        bottom: -30px
+        left: 50%
+        transform: translateX(-50%)
+        @media (max-width: 767px)
+            bottom: -15px
+
+.bedroom
+    background: #FAF5F7
+    padding-top: 45px
+    @media (max-width: 767px)
+        padding-top: 24px
+
+.lounge
+    margin-bottom: 100px
+    @media (max-width: 767px)
+        margin-bottom: 20px
+    @media (max-width: 575px)
+        margin-bottom: 0

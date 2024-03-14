@@ -1,0 +1,206 @@
+*
+    box-sizing: border-box
+
+html, body
+    position: relative
+    color: #000000
+    overflow-x: hidden
+    font-family: 'Gilroy', Arial, sans-serif
+    font-size: 16px
+    line-height: 1.7
+    margin: 0
+    padding: 0
+
+body
+    background: #FAF5F7
+
+ul
+    padding: 0
+
+a
+    color: #000000
+    text-decoration: none
+    transition: all .5s ease-in
+
+a:hover,
+a:focus
+    text-decoration: none
+    color: $rose
+
+svg, svg path
+    transition: all .5s ease-in
+
+.h1
+    font-weight: 500
+    font-size: 62px
+    line-height: 75px
+    text-align: center
+    text-transform: uppercase
+    color: #FFFFFF
+    margin-bottom: 0
+    @media (max-width: 767px)
+        font-weight: 800
+        font-size: 42px
+        line-height: 51px
+    &--homepage
+        color: $malina
+        @media (max-width: 767px)
+            color: #ffffff
+            text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15)
+        @media (max-width: 575px)
+            max-width: 260px
+
+.h2
+    font-family: 'Andantino', Arial, sans-serif
+    font-size: 48px
+    line-height: 56px
+    margin-bottom: 35px
+    &--line
+        position: relative
+        &::after
+            content: ''
+            position: absolute
+            bottom: -17px
+            left: 0
+            height: 1px
+            width: 47px
+            background-color: $rose
+    @media (max-width: 767px)
+        font-size: 32px
+        line-height: 100%
+
+.btn
+    font-weight: 300
+    font-size: 16px
+    line-height: 1
+    display: flex
+    justify-content: center
+    align-items: center
+    text-align: center
+    letter-spacing: 0.035em
+    color: #3ACBC6
+    background: #FFFFFF
+    border: 1px solid #77CEC8
+    border-radius: 40px
+    height: 50px
+    min-width: 239px
+    padding: 0 15px
+    transition: all .5s ease-in
+    &:hover, &:focus
+        background: #93CFCB
+        border-color: 1px solid #FFFFFF
+        color: #FFFFFF
+    &:active
+        background: #3ACBC6
+        border-color: 1px solid #FFFFFF
+        color: #FFFFFF
+    @media (max-width: 767px)
+        line-height: 170%
+        padding-top: 9px
+        padding-bottom: 9px
+        height: auto
+
+.btn--white
+    min-width: 196px
+    background: #FFFFFF
+    color: #000000
+    letter-spacing: normal
+    border: 2px solid transparent
+    &:hover, &:focus, &:active
+        border-color: #FFFFFF
+
+.btn--tiffany
+    padding: 0 22px
+    color: #FFFFFF
+    background: linear-gradient(180deg, #ADDCD7 0%, #96CCC6 100%)
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15)
+    border: none
+    &:hover, &:focus
+        background: linear-gradient(180deg, #93CFCB 0%, #77CEC8 100%)
+        border: none
+    &:active
+        background: linear-gradient(180deg, #3ACBC6 0%, #83CDC5 100%)
+        border: none
+    @media (max-width: 767px)
+        padding-top: 9px
+        padding-bottom: 9px
+
+.stroke
+    border: 1px solid #ffffff
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: transparent
+    &__inner
+        width: calc(100% - 30px)
+        margin-top: 15px
+        margin-bottom: 15px
+
+.keep-in-touch
+    display: none
+    position: relative
+    z-index: 10
+    &__outer
+        position: fixed
+        right: 15px
+        bottom: 50px
+        border-radius: 50%
+        width: 90px
+        height: 90px
+        background-color: rgba(147, 207, 203, 0.15)
+        display: flex
+        justify-content: center
+        align-items: center
+        animation: pulse 2s infinite
+    &__inner 
+        display: inline-block           
+        background-color: $tiffany
+        width: 60px
+        height: 60px
+        border-radius: 50%
+        display: flex
+        justify-content: center
+        align-items: center
+
+.scroll-up
+    display: none
+    position: fixed
+    left: 0
+    bottom: 40px
+    width: 36px
+    height: 36px
+    background: #FAF5F7
+    border: 1px solid $gray
+    padding: 5px 6px 5px 4px
+    text-align: center
+    transition: all .5s ease-in
+    z-index: 10
+    &:hover, &:focus
+        background-color: $tiffany
+        border-color: $tiffany
+    &:hover path,
+    &:focus path
+        stroke: #ffffff
+
+.to-main
+    position: relative
+    text-align: center
+    padding-bottom: 16px
+    z-index: 2
+    &__svg
+        margin-top: -3px
+        margin-right: 5px
+        path
+            @media (max-width: 767px)
+                fill: #000000
+    &__link
+        font-weight: 300
+        color: #ffffff
+        @media (max-width: 767px)
+            color: #000000
+    @media (max-width: 767px)
+        display: inline-block
+        background: rgba(255, 255, 255, 0.4)
+        border-radius: 50px
+        padding: 9px 20px 7px
+        margin-bottom: 8px

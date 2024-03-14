@@ -1,0 +1,58 @@
+.header
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    padding: 23px 0
+    color: #ffffff
+    background: linear-gradient($gray, transparent)
+    z-index: 5
+    @media (max-width: 767px)
+        padding: 10px 0 15px
+    &__logo
+        display: flex
+        flex-direction: column
+        &-text
+            display: block
+            margin-top: 9px
+            margin-left: 18px
+
+    &__nav
+        padding-top: 11px
+        &-list
+            list-style: none
+            display: flex
+            justify-content: space-between
+            align-items: center
+        &-link
+            font-weight: 300px
+            line-height: 18px
+            color: #ffffff
+    &__phone
+        padding-top: 11px
+        text-align: right
+        @media (max-width: 991px)
+            text-align: center
+        @media (max-width: 767px)
+            text-align: left
+        &-link
+            font-weight: 800
+            font-size: 24px
+            line-height: 29px
+            color: #ffffff
+            display: block
+            white-space: nowrap
+            @media (max-width: 767px)
+                font-size: 22px
+        &-btn
+            text-transform: uppercase
+            font-weight: 300
+            font-size: 10px
+            background-color: rgba(255, 255, 255, 0.7)
+            border-radius: 40px
+            padding: 2px 5px   
+            @media (max-width: 767px)
+                display: none
+            
+
+    

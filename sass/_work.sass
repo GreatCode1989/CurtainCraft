@@ -1,0 +1,49 @@
+.work
+    padding-bottom: 110px
+    @media (max-width: 767px)
+        padding: 64px 0 65px
+    .container
+        @media (max-width: 767px)
+            padding: 0
+            width: 100%
+    .h2
+        text-align: center
+        @media (max-width: 767px)
+            margin-bottom: 25px
+    &__item
+        &--horizontal
+            display: flex
+            align-items: center
+        figure
+            overflow: hidden
+    &__buttons
+        padding-top: 47px
+        justify-content: center
+        @media (max-width: 767px)
+            flex-direction: column
+            align-items: center
+            padding-top: 30px
+        .btn:first-child
+            margin-right: 30px
+            min-width: 293px
+            @media (max-width: 767px)
+                min-width: 0
+                width: 260px
+                margin-right: 0
+                margin-bottom: 10px
+        .btn:last-child
+            min-width: 239px
+            @media (max-width: 767px)
+                width: 260px
+    &__slider-item
+        height: 500px
+        width: 383px
+        @media (max-width: 575px)
+            height: 320px
+            width: 245px
+        .img-fluid
+            width: 98%
+            height: 100%
+            object-fit: cover
+            margin: 0 auto
+                

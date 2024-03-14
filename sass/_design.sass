@@ -1,0 +1,198 @@
+.design
+    padding-bottom: 166px
+    @media (max-width: 767px)
+        padding-bottom: 0
+    .container
+        @media (max-width: 767px)
+            max-width: none
+            width: 100%
+            padding: 0
+    &__designer
+        background: url(../img/designer.jpg) no-repeat 50% 50% / cover
+        width: 100%
+        height: 526px
+        @media (max-width: 575px)
+            height: 378px
+    &__order
+        padding: 32px 0 0 20px
+        position: relative
+        @media (max-width: 1199px)
+            padding-top: 0
+        @media (max-width: 767px)
+            padding-left: 0
+            background-color: #ffffff
+    .h2
+        margin-bottom: 25px
+        @media (max-width: 1199px)
+            line-height: 1
+            margin-bottom: 15px
+        @media (max-width: 767px)
+            text-align: center
+            margin-bottom: 20px
+    &__info
+        font-weight: 300
+        font-size: 14px
+        padding-bottom: 35px
+        max-width: 385px
+        @media (max-width: 767px)
+            text-align: center
+            margin: 0 auto
+            font-size: 16px
+            padding-bottom: 44px
+            padding: 0 15px 35px
+    .stroke
+        padding: 11px 13px
+    &__form
+        min-width: 357px
+        @media (max-width: 575px)
+            min-width: 0
+            text-align: center
+        &-wrapper
+            position: absolute
+            right: 0
+            bottom: -35px
+            z-index: 2
+            @media (max-width: 767px)
+                position: static
+                width: 100%
+            .stroke
+                @media (max-width: 767px)
+                    padding: 28px 15px 42px
+                    @media (max-width: 575px)
+                        padding-left: 0
+                        padding-right: 0
+        &-block
+            background-color: #ffffff
+            padding: 67px 95px 58px
+            @media (max-width: 767px)
+                padding: 0
+        &-title
+            font-weight: 800
+            font-size: 18px
+            text-transform: uppercase
+            color: $gray
+            margin-bottom: 30px
+            @media (max-width: 575px)
+                text-transform: none
+                font-size: 16px
+                font-weight: 300
+                margin-bottom: 18px
+                text-align: center
+        &-input
+            margin-bottom: 18px
+            width: 100%
+            @media (max-width: 575px)
+                max-width: 260px
+        .btn
+            margin-top: 8px
+            height: 53px
+            min-width: 255px
+            background: linear-gradient(180deg, #ADDCD7 0%, #96CCC6 100%)
+            @media (max-width: 767px)
+                margin: 7px auto 0
+
+.style
+    padding-bottom: 100px
+    @media (max-width: 767px)
+        padding-bottom: 20px
+    @media (max-width: 767px)
+        background-color: #ffffff
+    .design__wrapper
+        position: relative
+        height: 634px
+        @media (max-width: 767px)
+            height: auto
+    .design__designer
+        width: auto
+        height: 94%
+        position: absolute
+        top: 0
+        bottom: 0
+        right: 52%
+        left: 0
+        background-color: #FAF5F7
+        background-image: url(../img/designer.jpg)
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: 50% 50%
+        z-index: 1
+        @media (max-width: 767px)
+            display: none
+    .stroke
+        position: absolute
+        top: 25px
+        bottom: 0
+        right: 0
+        width: 60%
+        height: 100%
+        z-index: 2
+        padding: 17px 14px
+        @media (max-width: 991px)
+            width: 70%
+        @media (max-width: 767px)
+            width: 100%
+            padding: 0
+            position: static
+    .design__inner-block
+        height: 100%
+        width: 100%
+        background-color: #ffffff
+        padding: 57px 65px 50px 60px
+        @media (max-width: 991px)
+            padding: 40px
+        @media (max-width: 767px)
+            padding: 40px 40px 0
+        @media (max-width: 575px)
+            padding: 40px 25px 0
+    .h2
+        margin-bottom: 11px
+        @media (max-width: 991px)
+            font-size: 44px
+        @media (max-width: 767px)
+            font-size: 32px
+    .design__annonce
+        font-weight: 300
+        font-size: 18px
+        padding-bottom: 32px
+        @media (max-width: 767px)
+            position: relative
+            padding-left: 80px
+            font-size: 16px
+            padding-bottom: 0
+            margin-bottom: 25px
+            &::before
+                content: ''
+                position: absolute
+                left: 0
+                top: 50%
+                transform: translateY(-50%)
+                width: 60px
+                height: 60px
+                border-radius: 50%
+                background: url(../img/avatar.jpg) no-repeat 50% 50% / cover
+    .design__list
+        padding: 0 0 20px
+        list-style: none
+        @media (max-width: 767px)
+            margin-bottom: 5px
+    .design__item
+        padding-left: 20px
+        font-weight: 300
+        position: relative
+        &::before
+            content: ''
+            position: absolute
+            left: 0
+            top: 12px
+            width: 10px
+            height: 1px
+            background-color: #000000
+    .btn
+        max-width: 255px
+        @media (max-width: 767px)
+            margin: 0 auto
+    .container
+        @media (max-width: 767px)
+            max-width: 540px
+            padding-right: 15px
+            padding-left: 15px

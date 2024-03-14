@@ -1,0 +1,78 @@
+.order
+    padding: 48px 0
+    @media (max-width: 767px)
+        background-color: #ffffff
+        padding: 35px 0
+    &__common
+        position: relative
+        height: 610px
+        @media (max-width: 991px)
+            height: 650px
+        @media (max-width: 767px)
+            height: auto
+    .stroke
+        position: absolute
+        top: 0
+        bottom: 0
+        right: 0
+        width: 60%
+        height: 100%
+        z-index: 2
+        padding: 17px 14px
+        @media (max-width: 767px)
+            position: static
+            padding: 0 15px
+            width: 100%
+    &__stroke-inner
+        padding: 45px 40px 40px
+        background-color: #ffffff
+        height: 100%
+        @media (max-width: 767px)
+            padding: 0
+    &__info
+        text-align: center
+        font-weight: 300
+        font-size: 20px
+        line-height: 23px
+        padding-bottom: 20px
+        @media (max-width: 767px)
+            font-size: 22px
+            font-weight: 400
+            padding-bottom: 30px
+    .input[type="text"], input[type="email"], input[type="submit"]
+        width: 100%
+        margin-bottom: 20px
+        height: 47px
+        @media (max-width: 767px)
+            margin-bottom: 17px
+    .btn
+        padding: 0 22px
+        background: linear-gradient(180deg, #ADDCD7 0%, #96CCC6 100%)
+        max-width: 250px
+        margin: 0 auto 7px
+    &-form__link, &-form__link:not([href])
+        color: $tiffany
+    &-form__safety
+        font-weight: 300
+        font-size: 14p
+        line-height: 16px
+        text-align: center
+        color: #7D7E82
+    &__banner::after
+        @media (max-width: 767px)
+            background: url(../img/banner-mask-white.png) no-repeat 50% 100%/cover
+    &__pic
+        width: auto
+        position: absolute
+        top: 48px
+        bottom: 48px
+        right: 52%
+        left: 0
+        background-color: #FAF5F7
+        background-image: url(../img/order.jpg)
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: 50% 50%
+        z-index: 1
+        @media (max-width: 767px)
+            display: none

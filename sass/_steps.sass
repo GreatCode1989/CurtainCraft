@@ -1,0 +1,78 @@
+.steps
+    padding-bottom: 110px
+    @media (max-width: 767px)
+        padding-bottom: 20px
+    .h2
+        text-align: center
+        @media (max-width: 767px)
+            margin-bottom: 20px
+    &__item
+        display: flex
+        margin-bottom: 4px
+        &:last-child .steps__item-stroke::after
+            content: none
+        &-num
+            font-weight: 800
+            font-size: 80px
+            line-height: 80px
+            color: $rose
+            width: 45px
+            min-width: 45px
+        &-stroke
+            margin-top: 40px
+            margin-left: -12px
+            border-radius: 50%
+            width: 30px
+            height: 30px
+            padding: 4px
+            border: 3px solid #C4C4C4
+            position: relative
+            z-index: 4
+            &::after
+                content: ''
+                position: absolute
+                top: 26px
+                left: 50%
+                transform: translateX(-50%)
+                width: 1px
+                height: 76px
+                z-index: 1
+                background-color: rgba(125, 126, 130, 0.7)
+                @media (max-width: 767px)
+                    height: 109px
+                @media (max-width: 440px)
+                    height: 136px
+                @media (max-width: 440px)
+                    height: 160px
+        &-info
+            min-width: 600px
+            padding-left: 31px
+            margin-top: 40px
+            @media (max-width: 767px)
+                min-width: 0
+        &-point
+            width: 16px
+            height: 16px
+            border-radius: 50%
+            background-color: #7D7E82
+            position: relative
+            z-index: 5
+        &-title
+            font-weight: 800
+            font-size: 18px
+            color: $gray
+            padding-bottom: 6px
+            text-transform: uppercase
+            @media (max-width: 767px)
+                font-size: 16px
+                padding-bottom: 10px
+        &-description
+            font-weight: 300
+            font-size: 14px
+            @media (max-width: 767px)
+                min-height: 54px
+                font-size: 16px
+            @media (max-width: 440px)
+                min-height: 81px
+            @media (max-width: 350px)
+                min-height: 108px
